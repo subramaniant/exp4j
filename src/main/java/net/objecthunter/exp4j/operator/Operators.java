@@ -101,6 +101,7 @@ public abstract class Operators {
             case '*':
                 return builtinOperators[INDEX_MUTLIPLICATION];
             case '/':
+            case '÷':
                 return builtinOperators[INDEX_DIVISION];
             case '^':
                 return builtinOperators[INDEX_POWER];

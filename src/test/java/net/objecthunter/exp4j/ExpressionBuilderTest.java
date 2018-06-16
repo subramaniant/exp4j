@@ -268,6 +268,17 @@ public class ExpressionBuilderTest {
         assertEquals(1,res.getErrors().size());
         assertEquals("Too many operators", res.getErrors().get(0));
     }
+    
+    @Test
+    public void testExpressionBuilder20() throws Exception {
+        double result = new ExpressionBuilder("200/10")
+                .build()
+                .evaluate();
+        double result1 = new ExpressionBuilder("200÷10")
+                .build()
+                .evaluate();
+        assertEquals(result1, result, 0d);
+    }    
 
     /* legacy tests from earlier exp4j versions */
 
